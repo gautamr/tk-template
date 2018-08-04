@@ -3,7 +3,9 @@
             [compojure.core :as compojure]
             [lab.tk-template-web-core :as core]
             [puppetlabs.trapperkeeper.core :as trapperkeeper]
-            [puppetlabs.trapperkeeper.services :as tk-services]))
+            [puppetlabs.trapperkeeper.services :as tk-services]
+            [puppetlabs.metrics.http :as http-metrics]
+            [puppetlabs.metrics :as metrics]))
 
 (trapperkeeper/defservice hello-web-service
   [[:ConfigService get-in-config]
